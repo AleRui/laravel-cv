@@ -1,0 +1,27 @@
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.25.0.3. Set the 'ServerName' directive globally to suppress this message
+[Fri Mar 20 10:47:15.580821 2020] [core:warn] [pid 8] AH00098: pid file /var/run/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Mar 20 10:47:15.583231 2020] [mpm_prefork:notice] [pid 8] AH00163: Apache/2.4.38 (Debian) PHP/7.4.3 configured -- resuming normal operations
+[Fri Mar 20 10:47:15.583266 2020] [core:notice] [pid 8] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Fri Mar 20 10:48:47.875446 2020] [autoindex:error] [pid 10] [client 172.25.0.1:59952] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.25.0.3. Set the 'ServerName' directive globally to suppress this message
+[Fri Mar 20 10:52:31.474938 2020] [core:warn] [pid 9] AH00098: pid file /var/run/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Mar 20 10:52:31.477710 2020] [mpm_prefork:notice] [pid 9] AH00163: Apache/2.4.38 (Debian) PHP/7.4.3 configured -- resuming normal operations
+[Fri Mar 20 10:52:31.477750 2020] [core:notice] [pid 9] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Fri Mar 20 10:57:23.758718 2020] [mpm_prefork:notice] [pid 8] AH00163: Apache/2.4.38 (Debian) PHP/7.4.3 configured -- resuming normal operations
+[Fri Mar 20 10:57:23.758770 2020] [core:notice] [pid 8] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Fri Mar 20 10:57:46.923478 2020] [autoindex:error] [pid 9] [client 172.25.0.1:35918] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Fri Mar 20 11:04:28.358809 2020] [mpm_prefork:notice] [pid 8] AH00163: Apache/2.4.38 (Debian) PHP/7.4.3 configured -- resuming normal operations
+[Fri Mar 20 11:04:28.358886 2020] [core:notice] [pid 8] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Sun Mar 22 13:16:22.701420 2020] [mpm_prefork:notice] [pid 8] AH00163: Apache/2.4.38 (Debian) PHP/7.4.3 configured -- resuming normal operations
+[Sun Mar 22 13:16:22.701816 2020] [core:notice] [pid 8] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Tue Apr 14 11:14:23.364275 2020] [core:warn] [pid 8] AH00098: pid file /var/run/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Apr 14 11:14:23.366264 2020] [mpm_prefork:notice] [pid 8] AH00163: Apache/2.4.38 (Debian) PHP/7.4.3 configured -- resuming normal operations
+[Tue Apr 14 11:14:23.366291 2020] [core:notice] [pid 8] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Tue Apr 14 12:30:58.740483 2020] [core:warn] [pid 8] AH00098: pid file /var/run/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Apr 14 12:30:58.742963 2020] [mpm_prefork:notice] [pid 8] AH00163: Apache/2.4.38 (Debian) PHP/7.4.3 configured -- resuming normal operations
+[Tue Apr 14 12:30:58.743003 2020] [core:notice] [pid 8] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Tue Apr 14 12:34:20.677492 2020] [core:warn] [pid 8] AH00098: pid file /var/run/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Apr 14 12:34:20.679663 2020] [mpm_prefork:notice] [pid 8] AH00163: Apache/2.4.38 (Debian) PHP/7.4.3 configured -- resuming normal operations
+[Tue Apr 14 12:34:20.679692 2020] [core:notice] [pid 8] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Fri Apr 17 10:39:56.929063 2020] [mpm_prefork:notice] [pid 8] AH00163: Apache/2.4.38 (Debian) PHP/7.4.3 configured -- resuming normal operations
+[Fri Apr 17 10:39:56.929712 2020] [core:notice] [pid 8] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'

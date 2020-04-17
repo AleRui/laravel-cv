@@ -1,0 +1,34 @@
+version: "3"
+
+services:
+  laravel-cv-mariadb:
+    image: mariadb:10.1
+    container_name: laravel-cv-mariadb
+    command: "mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci  --innodb-flush-method=fsync"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=laravel-cv
+    ports:
+      - "3308:3306"
+    volumes:
+      - ./config/:/docker-entrypoint-initdb.d
+      - ./laravel-cv_mariadb:/var/lib/mysql
+
+  laravel-cv-php-apache:
+    build: ./
+    container_name: laravel-cv-php-apache
+    volumes:
+      - ./config/php.conf.ini:/usr/local/etc/php/conf.d/php.conf.ini
+      - ./config/xdebug.ini:/usr/local/etc/php/xdebug.ini
+      - ./app:/var/www/html
+      - ./logs:/var/log/apache2
+    ports:
+      - 8082:80
+      - 8443:443
+    depends_on:
+     - laravel-cv-mariadb
+    links:
+     - laravel-cv-mariadb
+
+volumes:
+  laravel-cv_mariadb:
