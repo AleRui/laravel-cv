@@ -16,7 +16,7 @@ class CreateWorkExperienceTable extends Migration
         if (!Schema::hasTable('work_experience')) {
             Schema::create('work_experience', function (Blueprint $table) {
                 $table->id();
-                $table->text('job_tittle');
+                $table->text('job_title');
                 $table->text('description')->nullable();
                 $table->char('company_name');
                 $table->timestamp('begin_at')->nullable();
