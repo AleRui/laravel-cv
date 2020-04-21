@@ -18,9 +18,9 @@ Route::get('/', function () {
 });
 
 Route::get('check-database', function () {
-  if(DB::connection()->getPdo()) {
-      echo "Successfully connected to the database => "
-        . DB::connection()->getDatabaseName();
+    if(DB::connection()->getPdo()) {
+        echo "Successfully connected to the database => "
+          . DB::connection()->getDatabaseName();
   }
 });
 
