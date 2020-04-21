@@ -70,7 +70,10 @@ Route::get('check-database', function () {
 ##### Firsts Migration
 (don't use namespace in migrations)
 Check that prepare composer.json
-you can enter in Docker laravel-php-apache and execute:
+you must enter in Docker laravel-php-apache
+`docker exec -it laravel-cv-php-apache bash`)
+ and execute:
+
 ```bash
 php artisan clear-compiled
 composer dump-autoload
@@ -105,6 +108,44 @@ composer show -l
 
 ```bash
 php artisan ui vue --auth
+```
+
+```bash
+npm install && npm run dev
+```
+
+Create this:
+
+```bash
+modificado:     README.md
+        modificado:     app/package.json
+        modificado:     app/resources/js/app.js
+        modificado:     app/resources/js/bootstrap.js
+        modificado:     app/resources/sass/app.scss
+        modificado:     app/routes/web.php
+        modificado:     app/webpack.mix.js
+
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que se será confirmado)
+
+        app/app/Http/Controllers/Auth/
+        app/app/Http/Controllers/HomeController.php
+        app/database/migrations/2014_10_12_100000_create_password_resets_table.php
+        app/public/css/
+        app/public/js/
+        app/public/mix-manifest.json
+        app/resources/js/components/
+        app/resources/sass/_variables.scss
+        app/resources/views/auth/
+        app/resources/views/home.blade.php
+        app/resources/views/layouts/
+```
+
+(remember all migrates in docker:
+`docker exec -it laravel-cv-php-apache bash`)
+
+```bash
+php artisan migrate
 ```
 
 ##### Create Basic Controller

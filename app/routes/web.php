@@ -23,3 +23,7 @@ Route::get('check-database', function () {
         . DB::connection()->getDatabaseName();
   }
 });
+
+Auth::routes(['register' => false]);
+
+Route::get('/home', 'HomeController@index')->name('home');
