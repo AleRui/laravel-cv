@@ -23,6 +23,7 @@ class WorkExperienceSeeder extends Seeder
                 'user_id' => 1
             ],
         ];
+
         foreach ($works as $work) {
             DB::table('work_experience')->insert($work);
         }
