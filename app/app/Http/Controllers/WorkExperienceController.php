@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\WorkExperience;
 
 class WorkExperienceController extends Controller
@@ -18,7 +19,7 @@ class WorkExperienceController extends Controller
     {
         //TODO validate id
         if (empty($id)) {
-            return $this->workExperience->all();
+            return response($this->workExperience->all(), 200);
         }
     }
 }
