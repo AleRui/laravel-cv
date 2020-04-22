@@ -27,3 +27,6 @@ Route::get('check-database', function () {
 Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+/* WorkExperiences */
+Route::get('/we', 'WorkExperienceController@show')->name('we.show');

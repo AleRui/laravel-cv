@@ -31,19 +31,30 @@ class AddPersonalDataColumnsToUsersTable extends Migration
      */
     public function down()
     {
-        $columns = [
-            'birthday',
-            'city_id',
-            'phone',
-            'github',
-            'website',
-        ];
-
-        foreach ($columns as $columnName) {
-            if (!empty($columnName)
-                && Schema::hasColumn('users', $columnName)) {
-                Schema::table('users', function (Blueprint $table, $columnName) {
-                    $table->dropColumn($columnName);
+        if (Schema::hasTable('users')) {
+            if (Schema::hasColumn('users', 'birthday')) {
+                Schema::table('users', function (Blueprint $table) {
+                    $table->dropColumn('birthday');
+                });
+            }
+            if (Schema::hasColumn('users', 'city_id')) {
+                Schema::table('users', function (Blueprint $table) {
+                    $table->dropColumn('city_id');
+                });
+            }
+            if (Schema::hasColumn('users', 'phone')) {
+                Schema::table('users', function (Blueprint $table) {
+                    $table->dropColumn('phone');
+                });
+            }
+            if (Schema::hasColumn('users', 'github')) {
+                Schema::table('users', function (Blueprint $table) {
+                    $table->dropColumn('github');
+                });
+            }
+            if (Schema::hasColumn('users', 'website')) {
+                Schema::table('users', function (Blueprint $table) {
+                    $table->dropColumn('website');
                 });
             }
         }

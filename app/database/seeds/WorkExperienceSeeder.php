@@ -25,7 +25,7 @@ class WorkExperienceSeeder extends Seeder
         ];
 
         foreach ($works as $work) {
-            DB::table('work_experience')->insert($work);
+            DB::table('work_experiences')->insert($work);
         }
     }
 }

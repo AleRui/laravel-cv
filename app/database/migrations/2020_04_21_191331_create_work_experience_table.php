@@ -13,14 +13,15 @@ class CreateWorkExperienceTable extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('work_experience')) {
-            Schema::create('work_experience', function (Blueprint $table) {
+        if (!Schema::hasTable('work_experiences')) {
+            Schema::create('work_experiences', function (Blueprint $table) {
                 $table->id();
                 $table->text('job_title');
                 $table->text('description')->nullable();
                 $table->char('company_name');
                 $table->timestamp('begin_at')->nullable();
                 $table->timestamp('finish_at')->nullable();
+                $table->softDeletes();
                 $table->bigInteger('user_id')->unsigned();
                 $table->foreign('user_id')
                     ->references('id')
@@ -36,8 +37,8 @@ class CreateWorkExperienceTable extends Migration
      */
     public function down()
     {
-        if (Schema::hasTable('users')) {
-            Schema::dropIfExists('work_experience');
+        if (Schema::hasTable('work_experiences')) {
+            Schema::dropIfExists('work_experiences');
         }
     }
 }
