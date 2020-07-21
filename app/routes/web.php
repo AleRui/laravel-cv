@@ -6,7 +6,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('check-database', function () {
+Route::get('check-db', function () {
     if(DB::connection()->getPdo()) {
         echo "Successfully connected to the database => "
           . DB::connection()->getDatabaseName();
