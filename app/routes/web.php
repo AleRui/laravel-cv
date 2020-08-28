@@ -7,10 +7,10 @@ Route::get('/', function () {
 });
 
 Route::get('check-db', function () {
-    if(DB::connection()->getPdo()) {
+    if (DB::connection()->getPdo()) {
         echo "Successfully connected to the database => "
-          . DB::connection()->getDatabaseName();
-  }
+            . DB::connection()->getDatabaseName();
+    }
 });
 
 Auth::routes(['register' => false]);
