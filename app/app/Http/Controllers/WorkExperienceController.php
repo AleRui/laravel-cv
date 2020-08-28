@@ -17,7 +17,7 @@ class WorkExperienceController extends Controller
     public function show(int $id = null)
     {
         //TODO validate id
-        if (empty($id)) {
+        if (!empty($id)) {
             return response($this->workExperience->all(), 200);
         }
     }
