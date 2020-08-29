@@ -24,8 +24,13 @@ Route::group(['prefix' => 'auth'], function () {
     Route::get('signup/activate/{token}', 'AuthController@signupActivate');
 
     // Acceden a través del Middleware
-    Route::group(['middleware' => 'auth:api'], function() {
+    Route::group(['middleware' => 'auth:api'], function () {
         Route::get('logout', 'AuthController@logout');
         Route::get('user', 'AuthController@user');
     });
+});
+
+Route::group(['middleware' => 'auth:api'], function () {
+    // Work Experience
+    Route::get('/we/{id?}', 'WorkExperienceController@show')->name('we.show');
 });

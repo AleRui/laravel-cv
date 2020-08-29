@@ -16,6 +16,3 @@ Route::get('check-db', function () {
 Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-/* WorkExperiences */
-Route::get('/we/{id?}', 'WorkExperienceController@show')->name('we.show');

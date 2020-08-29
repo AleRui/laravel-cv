@@ -47,3 +47,6 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 [Fri Aug 28 08:19:31.584670 2020] [core:warn] [pid 8] AH00098: pid file /var/run/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
 [Fri Aug 28 08:19:31.587104 2020] [mpm_prefork:notice] [pid 8] AH00163: Apache/2.4.38 (Debian) PHP/7.4.3 configured -- resuming normal operations
 [Fri Aug 28 08:19:31.587137 2020] [core:notice] [pid 8] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Sat Aug 29 11:08:01.004694 2020] [core:warn] [pid 11] AH00098: pid file /var/run/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Aug 29 11:08:01.006959 2020] [mpm_prefork:notice] [pid 11] AH00163: Apache/2.4.38 (Debian) PHP/7.4.3 configured -- resuming normal operations
+[Sat Aug 29 11:08:01.006983 2020] [core:notice] [pid 11] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'

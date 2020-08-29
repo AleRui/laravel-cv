@@ -1,14 +1,5 @@
 <?php
 
-// namespace App\Http\Controllers;
-
-// use Illuminate\Http\Request;
-
-// class AuthController extends Controller
-// {
-//     //
-// }
-
 namespace App\Http\Controllers;
 
 use App\User;
@@ -26,8 +17,6 @@ class AuthController extends Controller
 {
     public function signup(Request $request)
     {
-        //dd('singup');
-        //die();
         $request->validate([
             'name'     => 'required|string',
             'email'    => 'required|string|email|unique:users',
@@ -38,14 +27,11 @@ class AuthController extends Controller
             'name'     => $request->name,
             'email'    => $request->email,
             'password' => bcrypt($request->password),
-            // Email verification
-            //'activation_token'  => str_random(60),
             'activation_token'  => Str::random(60),
         ]);
 
         $user->save();
-
-        // Email verification
+        
         $user->notify(new SignupActivate($user));
 
         return response()->json(['message' => 'Successfully created user!'], 201);
