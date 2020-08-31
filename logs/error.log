@@ -50,3 +50,18 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 [Sat Aug 29 11:08:01.004694 2020] [core:warn] [pid 11] AH00098: pid file /var/run/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
 [Sat Aug 29 11:08:01.006959 2020] [mpm_prefork:notice] [pid 11] AH00163: Apache/2.4.38 (Debian) PHP/7.4.3 configured -- resuming normal operations
 [Sat Aug 29 11:08:01.006983 2020] [core:notice] [pid 11] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Mon Aug 31 10:26:22.112656 2020] [core:warn] [pid 9] AH00098: pid file /var/run/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Aug 31 10:26:22.114846 2020] [mpm_prefork:notice] [pid 9] AH00163: Apache/2.4.38 (Debian) PHP/7.4.3 configured -- resuming normal operations
+[Mon Aug 31 10:26:22.114875 2020] [core:notice] [pid 9] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Mon Aug 31 11:48:45.522513 2020] [mpm_prefork:notice] [pid 9] AH00163: Apache/2.4.38 (Debian) PHP/7.4.3 configured -- resuming normal operations
+[Mon Aug 31 11:48:45.522571 2020] [core:notice] [pid 9] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Mon Aug 31 11:59:38.124007 2020] [mpm_prefork:notice] [pid 8] AH00163: Apache/2.4.38 (Debian) PHP/7.4.3 configured -- resuming normal operations
+[Mon Aug 31 11:59:38.124076 2020] [core:notice] [pid 8] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Mon Aug 31 12:03:34.457919 2020] [mpm_prefork:notice] [pid 11] AH00163: Apache/2.4.38 (Debian) PHP/7.4.3 configured -- resuming normal operations
+[Mon Aug 31 12:03:34.457992 2020] [core:notice] [pid 11] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Mon Aug 31 12:08:50.491384 2020] [mpm_prefork:notice] [pid 8] AH00163: Apache/2.4.38 (Debian) PHP/7.4.3 configured -- resuming normal operations
+[Mon Aug 31 12:08:50.491442 2020] [core:notice] [pid 8] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Mon Aug 31 05:21:50.182541 2020] [mpm_prefork:notice] [pid 8] AH00163: Apache/2.4.38 (Debian) PHP/7.4.3 configured -- resuming normal operations
+[Mon Aug 31 05:21:50.182596 2020] [core:notice] [pid 8] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Mon Aug 31 14:27:34.179866 2020] [mpm_prefork:notice] [pid 9] AH00163: Apache/2.4.38 (Debian) PHP/7.4.3 configured -- resuming normal operations
+[Mon Aug 31 14:27:34.179934 2020] [core:notice] [pid 9] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'

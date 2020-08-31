@@ -36,6 +36,7 @@ RUN apt-get update && apt-get install -y --fix-missing \
   psmisc \
   systemd \
   tar \
+  tzdata\
   unzip \
   wget && \
   apt-get clean &&  \
@@ -62,6 +63,9 @@ RUN docker-php-ext-install \
   xsl \
   xml \
   zip
+
+ENV TZ=Europe/Madrid
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN docker-php-ext-configure gd \
 --with-freetype=/usr/include/ \

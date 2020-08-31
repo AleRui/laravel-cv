@@ -13,6 +13,9 @@ use Illuminate\Support\Str;
 // Notificacion Email
 use App\Notifications\SignupActivate;
 
+// Log
+use Illuminate\Support\Facades\Log;
+
 class AuthController extends Controller
 {
     public function signup(Request $request)
@@ -31,6 +34,8 @@ class AuthController extends Controller
         ]);
 
         $user->save();
+
+        Log::channel('my_custom_log')->info('Register new user: ' . $user->email);
         
         $user->notify(new SignupActivate($user));
 
@@ -46,7 +51,6 @@ class AuthController extends Controller
         ]);
 
         $credentials = request(['email', 'password']);
-        // ??? Esto debe ir aquí?
         $credentials['active'] = 1;
         $credentials['deleted_at'] = null;
 
@@ -64,6 +68,9 @@ class AuthController extends Controller
         }
         $token->save();
 
+        Log::channel('my_custom_log')
+            ->info('Login: ' . $user->email);
+
         return response()->json([
             'access_token' => $tokenResult->accessToken,
             'token_type'   => 'Bearer',
@@ -75,6 +82,10 @@ class AuthController extends Controller
     public function logout(Request $request)
     {
         $request->user()->token()->revoke();
+
+        Log::channel('my_custom_log')
+            ->info('Logout: ' . $request->user()->email);
+
         return response()->json(['message' => 'Successfully logged out']);
     }
 
