@@ -199,4 +199,10 @@ If use Passport, after migration or seed:
 php artisan passport:install
 ```
 
+##### Creating elements:
+Create model + controller + migration + seed
+```bash
+php artisan make:model Study -mcs
+```
+
 

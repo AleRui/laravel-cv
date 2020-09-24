@@ -27,6 +27,10 @@ Route::group(['prefix' => 'auth'], function () {
 });
 
 Route::group(['middleware' => 'auth:api'], function () {
+    // Presentation Letters
+    Route::get('/letters/{id?}', 'PresentationLetterController@show')->name('letters.show');
+    // Studies
+    Route::get('/studies/{id?}', 'StudyController@show')->name('studie.show');
     // Work Experience
     Route::get('/we/{id?}', 'WorkExperienceController@show')->name('we.show');
 });

@@ -1,5 +1,6 @@
 <?php
 
+use App\PresentationLetter;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -12,7 +13,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
+            // main
             UserSeeder::class,
+            // secondary
+            PresentationLetterSeeder::class,
+            StudySeeder::class,
             WorkExperienceSeeder::class,
         ]);
     }
