@@ -205,4 +205,19 @@ Create model + controller + migration + seed
 php artisan make:model Study -mcs
 ```
 
+##### Creating keys | Client Credentials Grant Tokens
+```bash
+php artisan passport:keys
+```
+Generate:
+api/storage/oauth-private.key
+api/storage/oauth-public.key
+
+The passport:client Command
+Write id client to asign
+
+Client ID: 3
+Client secret: lPHg8Wr9UDtDK0i5UNnOuQuVzBbjcKIosuNjAtmK
+
+you can access to: http://curriculum.ale:8082/oauth/token for take token
 

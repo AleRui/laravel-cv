@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Passport | Personal Access Tokens
 Route::group(['prefix' => 'auth'], function () {
     Route::post('login', 'AuthController@login');
     Route::post('signup', 'AuthController@signup');
@@ -33,4 +34,12 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::get('/studies/{id?}', 'StudyController@show')->name('studie.show');
     // Work Experience
     Route::get('/we/{id?}', 'WorkExperienceController@show')->name('we.show');
+});
+
+// -----------------------------------------------------------------------------
+
+// Passport:client | Client Credentials Grant Tokens
+Route::group(['middleware' => 'client'], function () {
+    // Studies
+    Route::get('/client/studies/{id?}', 'StudyController@show')->name('studie.show');
 });
