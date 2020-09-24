@@ -16,15 +16,14 @@ use App\Notifications\SignupActivate;
 // Log
 use Illuminate\Support\Facades\Log;
 
+// Custom Request
+use App\Http\Requests\AuthLoginRequest;
+
 class AuthController extends Controller
 {
-    public function signup(Request $request)
+    public function signup(AuthLoginRequest $request)
     {
-        $request->validate([
-            'name'     => 'required|string',
-            'email'    => 'required|string|email|unique:users',
-            'password' => 'required|string',
-        ]);
+        $validated = $request->validated();
 
         $user = new User([
             'name'     => $request->name,
@@ -35,11 +34,13 @@ class AuthController extends Controller
 
         $user->save();
 
-        Log::channel('my_custom_log')->info('Register new user: ' . $user->email);
+        Log::channel('my_custom_log')
+            ->info('Register new user: ' . $user->email);
         
         $user->notify(new SignupActivate($user));
 
-        return response()->json(['message' => 'Successfully created user!'], 201);
+        return response()
+            ->json(['message' => 'Successfully created user!'], 201);
     }
 
     public function login(Request $request)
@@ -99,7 +100,8 @@ class AuthController extends Controller
         $user = User::where('activation_token', $token)->first();
 
         if (!$user) {
-            return response()->json(['message' => 'El token de activación es inválido'], 404);
+            return response()
+                ->json(['message' => 'El token de activación es inválido'], 404);
         }
 
         $user->active = true;

@@ -187,4 +187,10 @@ Generate a new migration with a basic schema that must be completed
 php artisan make:model Name -m
 ```
 
+##### IMPORTANT NOTE
+If use Passport, after migration or seed:
+```bash
+php artisan passport:install
+```
+
 
