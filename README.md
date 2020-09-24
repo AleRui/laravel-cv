@@ -188,7 +188,13 @@ php artisan make:model Name -m
 ```
 
 ##### IMPORTANT NOTE
+
+```bash
+php artisan migrate:fresh --seed
+```
+
 If use Passport, after migration or seed:
+
 ```bash
 php artisan passport:install
 ```
