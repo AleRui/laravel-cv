@@ -36,7 +36,7 @@ class AuthController extends Controller
 
         Log::channel('my_custom_log')
             ->info('Register new user: ' . $user->email);
-        
+
         $user->notify(new SignupActivate($user));
 
         return response()
@@ -77,6 +77,7 @@ class AuthController extends Controller
             'token_type'   => 'Bearer',
             'expires_at'   => Carbon::parse($tokenResult->token->expires_at)
                 ->toDateTimeString(),
+            'id_user' => $user->id,
         ]);
     }
 
