@@ -216,8 +216,34 @@ api/storage/oauth-public.key
 The passport:client Command
 Write id client to asign
 
+```bash
+php artisan passport:client
+php artisan passport:client --public
+php artisan passport:client --password
+php artisan passport:client --client
+php artisan passport:client --personal
+```
+
 Client ID: 3
 Client secret: lPHg8Wr9UDtDK0i5UNnOuQuVzBbjcKIosuNjAtmK
 
 you can access to: http://curriculum.ale:8082/oauth/token for take token
+
+##### Purge revoked and expired tokens and auth codes...
+php artisan passport:purge
+
+##### Only purge revoked tokens and auth codes...
+php artisan passport:purge --revoked
+
+##### Only purge expired tokens and auth codes...
+php artisan passport:purge --expired
+
+#### Dump database
+```bash
+docker exec laravel-cv-mariadb -u root -proot laravel-cv > database/dump/laravel-cv-$(date +'%m-%d-%Y').dump
+```
+#### Transaccion DB
+```bash
+mysqldump --single-transaction -u root -proot -h 127.0.0.1 --port 3308 laravel-cv | mysql -h eu-cdbr-west-03.cleardb.net -u b35e40b7f1574a -pcaa9c800 -D heroku_2c548dd4909db78
+```
 

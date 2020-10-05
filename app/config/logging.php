@@ -42,8 +42,7 @@ return [
         ],
 
         'single' => [
-            'driver' => 'single',
-            'path' => storage_path('logs/laravel.log'),
+            'driver' => 'errorlog',
             'level' => 'debug',
         ],
 
@@ -99,7 +98,7 @@ return [
         'emergency' => [
             'path' => storage_path('logs/laravel.log'),
         ],
-        
+
         'my_custom_log' => [
             'driver' => 'single',
             'path' => storage_path('logs/mi-log-custom.log'),

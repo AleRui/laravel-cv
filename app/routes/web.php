@@ -8,9 +8,11 @@ Route::get('/', function () {
 });
 
 Route::get('check-db', function () {
-    if (DB::connection()->getPdo()) {
-        echo "Successfully connected to the database => "
-            . DB::connection()->getDatabaseName();
+    try {
+        DB::connection()->getPdo();
+        echo DB::connection()->getDatabaseName();
+    } catch (Exception $e) {
+        echo 'Excepción capturada: ',  $e->getMessage(), "\n";
     }
 });
 
