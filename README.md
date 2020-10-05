@@ -206,7 +206,7 @@ php artisan make:model Study -mcs
 ```
 
 ##### Creating keys | Client Credentials Grant Tokens
-```bash
+```baphp artisan passport:purgesh
 php artisan passport:keys
 ```
 Generate:
