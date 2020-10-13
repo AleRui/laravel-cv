@@ -206,7 +206,7 @@ php artisan make:model Study -mcs
 ```
 
 ##### Creating keys | Client Credentials Grant Tokens
-```baphp artisan passport:purgesh
+```bah
 php artisan passport:keys
 ```
 Generate:
@@ -230,6 +230,7 @@ Client secret: lPHg8Wr9UDtDK0i5UNnOuQuVzBbjcKIosuNjAtmK
 you can access to: http://curriculum.ale:8082/oauth/token for take token
 
 ##### Purge revoked and expired tokens and auth codes...
+php artisan passport:purge
 php artisan passport:purge
 
 ##### Only purge revoked tokens and auth codes...

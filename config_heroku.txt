@@ -1,0 +1,12 @@
+heroku config:add APP_NAME=Laravel
+heroku config:add APP_ENV=production
+heroku config:add APP_KEY=base64:EpRQTY+3UJ8+QxFr22EOteq8IredMdHNjmSCRKijPl8=
+heroku config:add APP_DEBUG=true
+heroku config:add APP_URL=https://aleruizcv.herokuapp.com
+
+heroku config:add DB_CONNECTION=mysql
+heroku config:add DB_HOST=eu-cdbr-west-03.cleardb.net
+heroku config:add DB_PORT=3306
+heroku config:add DB_DATABASE=heroku_2c548dd4909db78
+heroku config:add DB_USERNAME=b35e40b7f1574a
+heroku config:add DB_PASSWORD=caa9c800
